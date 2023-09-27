@@ -1,10 +1,9 @@
 <template>
   <div>启动测试</div>
 
-  <Button @click="easyLog"></Button>
+  <wh-button @click="easyLog"></wh-button>
 </template>
 
 <script lang="ts" setup>
 import { easyLog } from "@zwh/a";
-import { Button } from "@zwh/components";
 </script>
