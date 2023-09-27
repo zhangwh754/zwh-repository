@@ -1,17 +1,19 @@
 {
-  "name": "zwh",
+  "name": "live-play",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "less": "^4.2.0",
-    "typescript": "^5.2.2",
-    "vue": "^3.2.36"
+    "@vitejs/plugin-vue": "^4.3.4",
+    "vite": "^4.4.9"
+  },
+  "dependencies": {
+    "@zwh/a": "workspace:^"
   }
 }
