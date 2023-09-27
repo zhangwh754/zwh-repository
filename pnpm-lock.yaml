@@ -23,6 +23,9 @@ importers:
       '@zwh/a':
         specifier: workspace:^
         version: link:../packages/a
+      '@zwh/components':
+        specifier: workspace:^
+        version: link:../packages/components
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^4.3.4
@@ -38,6 +41,8 @@ importers:
       '@zwh/a':
         specifier: workspace:^
         version: link:../a
+
+  packages/components: {}
 
 packages:
 

@@ -14,6 +14,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
-    "@zwh/a": "workspace:^"
+    "@zwh/a": "workspace:^",
+    "@zwh/components": "workspace:^"
   }
 }
