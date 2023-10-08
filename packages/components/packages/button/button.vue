@@ -1,5 +1,7 @@
 <template>
-  <button :class="['wh-button', buttonClassName]">{{ props.label }}</button>
+  <button :class="['wh-button', buttonClassName]">
+    <slot name="default"></slot>
+  </button>
 </template>
 
 <script lang="ts" setup>
@@ -10,11 +12,9 @@ defineOptions({ name: "wh-button" });
 const props = withDefaults(
   defineProps<{
     type?: "primary" | "default" | "warning";
-    label?: string;
   }>(),
   {
     type: "default",
-    label: "默认文字",
   }
 );
 
