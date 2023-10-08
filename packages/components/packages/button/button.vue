@@ -6,6 +6,7 @@
 
 <script lang="ts" setup>
 import { computed } from "vue";
+import "./style.less";
 
 defineOptions({ name: "wh-button" });
 
@@ -26,7 +27,3 @@ const buttonClassName = computed(() => {
   return `wh-button--${name}`;
 });
 </script>
-
-<style lang="less" scoped>
-@import "./style.less";
-</style>
