@@ -5,10 +5,8 @@ import DefineOptions from "unplugin-vue-define-options/vite";
 
 export default defineConfig({
   build: {
-    //打包文件目录
-    outDir: "es",
     //压缩
-    minify: false,
+    // minify: false,
     emptyOutDir: false,
     rollupOptions: {
       //忽略打包vue文件和.less文件
@@ -24,7 +22,7 @@ export default defineConfig({
           preserveModules: true,
           exports: "named",
           //配置打包根目录
-          dir: "./dist/es",
+          dir: "../dist/es",
         },
         {
           //打包格式
@@ -35,20 +33,23 @@ export default defineConfig({
           preserveModules: true,
           exports: "named",
           //配置打包根目录
-          dir: "./dist/lib",
+          dir: "../dist/lib",
         },
       ],
     },
     lib: {
       entry: "./index.ts",
+      name: "@djdg626/components",
     },
   },
   plugins: [
     vue(),
     dts({
       entryRoot: "./src",
-      outputDir: ["./dist/es/src", "./dist/lib/src"],
+      outputDir: ["../dist/es/src", "../dist/lib/src"],
       tsConfigFilePath: "../../tsconfig.json",
+      skipDiagnostics: false,
+      logDiagnostics: true,
     }),
     DefineOptions(),
     {

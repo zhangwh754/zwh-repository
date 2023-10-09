@@ -2,6 +2,10 @@
 
 import fs from "fs";
 import { resolve } from "path";
+import { pkgPath } from './paths';
+
+//保留的文件
+const stayFile = ["package.json", "README.md"];
 
 const delPath = async (path: string) => {
   let files: string[] = [];
@@ -17,12 +21,14 @@ const delPath = async (path: string) => {
         if (file != "node_modules") await delPath(curPath);
       } else {
         // 删除文件
-        fs.unlinkSync(curPath);
+        if (!stayFile.includes(file)) {
+          fs.unlinkSync(curPath);
+        }
       }
     });
 
     // 删除空目录
-    fs.rmdirSync(path);
+    if (path != `${pkgPath}/dist`) fs.rmdirSync(path);
   }
 };
 export default delPath;

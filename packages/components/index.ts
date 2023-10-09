@@ -1,5 +1,5 @@
-import * as components from "./packages";
-export * from "./packages";
+import * as components from "./src";
+export * from "./src";
 import { App } from "vue";
 
 export default {

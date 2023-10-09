@@ -11,11 +11,11 @@ export const removeDist = () => {
 
 //打包样式
 export const buildStyle = () => {
-  return src(`${componentPath}/packages/**/*.less`)
+  return src(`${componentPath}/src/**/*.less`)
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(dest(`${pkgPath}/dist/lib/packages`))
-    .pipe(dest(`${pkgPath}/dist/es/packages`));
+    .pipe(dest(`${pkgPath}/dist/lib/src`))
+    .pipe(dest(`${pkgPath}/dist/es/src`));
 };
 
 //打包组件
@@ -23,17 +23,10 @@ export const buildComponent = async () => {
   run("pnpm run build", componentPath);
 };
 
-// export const copyFile = async () => {
-//   return src(`${componentPath}/package.json`).pipe(
-//     dest(`${pkgPath}/dist`)
-//   );
-// };
-
 export default series(
   async () => removeDist(),
   parallel(
     async () => buildStyle(),
     async () => buildComponent()
-    // async () => copyFile()
   )
 );
