@@ -22,7 +22,7 @@ export default defineConfig({
           preserveModules: true,
           exports: "named",
           //配置打包根目录
-          dir: "../dist/es",
+          dir: "./dist/es",
         },
         {
           //打包格式
@@ -33,7 +33,7 @@ export default defineConfig({
           preserveModules: true,
           exports: "named",
           //配置打包根目录
-          dir: "../dist/lib",
+          dir: "./dist/lib",
         },
       ],
     },
@@ -46,7 +46,7 @@ export default defineConfig({
     vue(),
     dts({
       entryRoot: "./src",
-      outputDir: ["../dist/es/src", "../dist/lib/src"],
+      outputDir: ["./dist/es/src", "./dist/lib/src"],
       tsConfigFilePath: "../../tsconfig.json",
       skipDiagnostics: false,
       logDiagnostics: true,

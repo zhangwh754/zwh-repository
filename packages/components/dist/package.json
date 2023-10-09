@@ -1,0 +1,18 @@
+{
+  "name": "@djdg626/components_test",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "author": "djdg626",
+  "license": "MIT",
+  "description": "",
+  "typings": "lib/index.d.ts"
+}
