@@ -59,6 +59,9 @@ importers:
 
   live-play:
     dependencies:
+      '@djdg626/components_test':
+        specifier: ^0.1.0
+        version: 0.1.0
       '@zwh/a':
         specifier: workspace:^
         version: link:../packages/a
@@ -111,6 +114,10 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
     dev: true
+
+  /@djdg626/components_test@0.1.0:
+    resolution: {integrity: sha512-dV7gbDYM4tASpEti7sn3fFscecSlpI0UIsPRbW8rTq/GgJAHfDj/c2k0P5LkFUZeWAoItnIla55hROpk0m522g==}
+    dev: false
 
   /@esbuild/android-arm64@0.18.20:
     resolution: {integrity: sha512-Nz4rJcchGDtENV0eMKUNa6L12zz2zBDXuhj/Vjh18zGqB44Bi7MBMSXjgunJgjRhCmKOjnPuZp4Mb6OKqtMHLQ==}
