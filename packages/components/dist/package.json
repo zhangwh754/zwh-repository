@@ -14,5 +14,8 @@
   "author": "djdg626",
   "license": "MIT",
   "description": "",
-  "typings": "lib/index.d.ts"
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "release": "release-it"
+  }
 }

@@ -1,6 +1,6 @@
 <template>
   <button :class="['wh-button', buttonClassName]">
-    <slot name="default"></slot>
+    <slot name="default">默认文字</slot>
   </button>
 </template>
 
