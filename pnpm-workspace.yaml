@@ -1,4 +1,3 @@
 packages:
   - "packages/**"
   - "live-play"
-  - '!packages/components/dist/**'

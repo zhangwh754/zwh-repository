@@ -14,7 +14,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
-    "@djdg626/components_test": "^0.1.0",
+    "@djdg626/components_test": "workspace:^",
     "@zwh/a": "workspace:^",
     "@zwh/components": "workspace:^"
   }
